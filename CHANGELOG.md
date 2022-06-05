@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.5
+
+Bump ec0lint-css version
+
 ## 0.0.4
 
 Fix warning type issues

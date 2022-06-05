@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.0.4
+
+Fix warning type issues
+
 ## 0.0.3
 
 Remove stylelint

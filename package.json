@@ -1,16 +1,16 @@
 {
-  "name": "jest-preset-stylelint",
+  "name": "jest-preset-ec0lint-css",
   "version": "5.0.3",
-  "description": "Jest preset for Stylelint plugins.",
+  "description": "Jest preset for ec0lint-css plugins.",
   "keywords": [
-    "stylelint",
+    "ec0lint-css",
     "jest",
     "jest-preset",
     "preset"
   ],
-  "repository": "stylelint/jest-preset-stylelint",
+  "repository": "ec0lint-css/jest-preset-ec0lint-css",
   "license": "MIT",
-  "author": "stylelint",
+  "author": "ec0lint",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
@@ -65,7 +65,7 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2",
     "remark-cli": "^10.0.1",
-    "stylelint": "^14.8.1",
+    "ec0lint-css": "^0.0.1",
     "typescript": "^4.6.4"
   },
   "peerDependencies": {

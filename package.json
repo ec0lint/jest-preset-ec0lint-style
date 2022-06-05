@@ -1,6 +1,6 @@
 {
   "name": "jest-preset-ec0lint-css",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Jest preset for ec0lint-css plugins.",
   "keywords": [
     "ec0lint-css",
@@ -56,7 +56,7 @@
     "@stylelint/prettier-config": "^2.0.0",
     "@stylelint/remark-preset": "^3.0.0",
     "@types/jest": "^27.4.1",
-    "ec0lint-css": "^0.0.3",
+    "ec0lint-css": "^0.0.4",
     "eslint": "^8.14.0",
     "eslint-config-stylelint": "^15.0.0",
     "husky": "^7.0.4",

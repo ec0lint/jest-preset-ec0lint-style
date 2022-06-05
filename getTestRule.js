@@ -2,7 +2,7 @@
 
 const util = require('util');
 // eslint-disable-next-line node/no-unpublished-require -- Avoid auto-install of `ec0lint-css` peer dependency.
-const { lint } = require('ec0lint-css');
+const { lint } = require('stylelint');
 
 /**
  * @typedef {import('.').TestCase} TestCase
@@ -179,7 +179,7 @@ function setupTestCases({ name, cases, schema, comparisons }) {
 }
 
 /**
- * @param {import('ec0lint-css').LinterResult} output
+ * @param {import('stylelint').LinterResult} output
  * @returns {string}
  */
 function getOutputCss(output) {

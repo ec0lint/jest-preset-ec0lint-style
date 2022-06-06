@@ -1,15 +1,15 @@
 # jest-preset-ec0lint-css
 
-[![NPM version](https://img.shields.io/npm/v/jest-preset-stylelint.svg)](https://www.npmjs.org/package/jest-preset-stylelint) [![Build Status](https://github.com/stylelint/jest-preset-stylelint/workflows/CI/badge.svg)](https://github.com/stylelint/jest-preset-stylelint/actions)
+[![NPM version](https://img.shields.io/npm/v/jest-preset-ec0lint-css.svg)](https://www.npmjs.org/package/jest-preset-ec0lint-css)
 
-[Jest](https://facebook.github.io/jest/) preset for [Stylelint](https://github.com/stylelint) plugins.
+[Jest](https://facebook.github.io/jest/) preset for [ec0lint-css](https://github.com/ec0lint-css) plugins.
 
 ## Installation
 
-Install the preset alongside Jest and Stylelint:
+Install the preset alongside Jest and ec0lint-css:
 
 ```bash
-npm install jest-preset-stylelint jest stylelint --save-dev
+npm install jest-preset-ec0lint-css jest ec0lint-css --save-dev
 ```
 
 ## Setup
@@ -18,7 +18,7 @@ Add the preset to your `jest.config.js` or `jest` field in `package.json`:
 
 ```json
 {
-  "preset": "jest-preset-stylelint"
+  "preset": "jest-preset-ec0lint-css"
 }
 ```
 
@@ -27,7 +27,7 @@ Optionally, you can avoid specifying `plugins` in every schema by defining your 
 1. Create `jest.setup.js` in the root of your project. Provide `plugins` option to `getTestRule()`:
 
    ```js
-   const { getTestRule } = require("jest-preset-stylelint");
+   const { getTestRule } = require("jest-preset-ec0lint-css");
 
    global.testRule = getTestRule({ plugins: ["./"] });
    ```
@@ -36,7 +36,7 @@ Optionally, you can avoid specifying `plugins` in every schema by defining your 
 
    ```json
    {
-     "preset": "jest-preset-stylelint",
+     "preset": "jest-preset-ec0lint-css",
      "setupFiles": ["jest.setup.js"]
    }
    ```
@@ -107,6 +107,12 @@ testRule({
 ## Schema properties
 
 See the [type definitions](index.d.ts).
+
+# ec0lint mission
+
+ec0lint is a static code analysis tool that provides users with hints on how to reduce the carbon footprint of their websites during the development process. Applying code changes suggested by ec0lint results in lower carbon emissions per visit, quicker loading and higher space efficiency. The tool is open-source and community-driven.
+
+Learn more [at our page](https://ec0lint.com)
 
 ## [Changelog](CHANGELOG.md)
 

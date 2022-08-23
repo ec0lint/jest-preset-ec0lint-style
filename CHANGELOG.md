@@ -6,7 +6,7 @@ First release - MVP - 4 rules with replacement of heavy libraries
 
 ## 0.0.5
 
-Bump ec0lint-css version
+Bump ec0lint-style version
 
 ## 0.0.4
 

@@ -1,8 +1,8 @@
 'use strict';
 
 const util = require('util');
-// eslint-disable-next-line node/no-unpublished-require -- Avoid auto-install of `ec0lint-css` peer dependency.
-const { lint } = require('ec0lint-css');
+// eslint-disable-next-line node/no-unpublished-require -- Avoid auto-install of `ec0lint-style` peer dependency.
+const { lint } = require('ec0lint-style');
 
 /**
  * @typedef {import('.').TestCase} TestCase
@@ -179,7 +179,7 @@ function setupTestCases({ name, cases, schema, comparisons }) {
 }
 
 /**
- * @param {import('ec0lint-css').LinterResult} output
+ * @param {import('ec0lint-style').LinterResult} output
  * @returns {string}
  */
 function getOutputCss(output) {

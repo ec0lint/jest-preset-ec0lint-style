@@ -1,15 +1,15 @@
-# jest-preset-ec0lint-css
+# jest-preset-ec0lint-style
 
-[![NPM version](https://img.shields.io/npm/v/jest-preset-ec0lint-css.svg)](https://www.npmjs.org/package/jest-preset-ec0lint-css)
+[![NPM version](https://img.shields.io/npm/v/jest-preset-ec0lint-style.svg)](https://www.npmjs.org/package/jest-preset-ec0lint-style)
 
-[Jest](https://facebook.github.io/jest/) preset for [ec0lint-css](https://github.com/ec0lint-css) plugins.
+[Jest](https://facebook.github.io/jest/) preset for [ec0lint-style](https://github.com/ec0lint-style) plugins.
 
 ## Installation
 
-Install the preset alongside Jest and ec0lint-css:
+Install the preset alongside Jest and ec0lint-style:
 
 ```bash
-npm install jest-preset-ec0lint-css jest ec0lint-css --save-dev
+npm install jest-preset-ec0lint-style jest ec0lint-style --save-dev
 ```
 
 ## Setup
@@ -18,7 +18,7 @@ Add the preset to your `jest.config.js` or `jest` field in `package.json`:
 
 ```json
 {
-  "preset": "jest-preset-ec0lint-css"
+  "preset": "jest-preset-ec0lint-style"
 }
 ```
 
@@ -27,7 +27,7 @@ Optionally, you can avoid specifying `plugins` in every schema by defining your 
 1. Create `jest.setup.js` in the root of your project. Provide `plugins` option to `getTestRule()`:
 
    ```js
-   const { getTestRule } = require("jest-preset-ec0lint-css");
+   const { getTestRule } = require("jest-preset-ec0lint-style");
 
    global.testRule = getTestRule({ plugins: ["./"] });
    ```
@@ -36,7 +36,7 @@ Optionally, you can avoid specifying `plugins` in every schema by defining your 
 
    ```json
    {
-     "preset": "jest-preset-ec0lint-css",
+     "preset": "jest-preset-ec0lint-style",
      "setupFiles": ["jest.setup.js"]
    }
    ```

@@ -1,14 +1,14 @@
 {
-  "name": "jest-preset-ec0lint-css",
-  "version": "1.0.0",
-  "description": "Jest preset for ec0lint-css plugins.",
+  "name": "jest-preset-ec0lint-style",
+  "version": "1.0.1",
+  "description": "Jest preset for ec0lint-style plugins.",
   "keywords": [
-    "ec0lint-css",
+    "ec0lint-style",
     "jest",
     "jest-preset",
     "preset"
   ],
-  "repository": "ec0lint-css/jest-preset-ec0lint-css",
+  "repository": "ec0lint-style/jest-preset-ec0lint-style",
   "license": "MIT",
   "author": "ec0lint",
   "main": "index.js",
@@ -56,7 +56,7 @@
     "@stylelint/prettier-config": "^2.0.0",
     "@stylelint/remark-preset": "^3.0.0",
     "@types/jest": "^27.4.1",
-    "ec0lint-css": "^0.0.10",
+    "ec0lint-style": "^1.0.1",
     "eslint": "^8.14.0",
     "eslint-config-stylelint": "^15.0.0",
     "husky": "^7.0.4",

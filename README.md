@@ -1,119 +1,57 @@
-# jest-preset-ec0lint-style
+![ec0lint](/banner_github.png)
 
-[![NPM version](https://img.shields.io/npm/v/jest-preset-ec0lint-style.svg)](https://www.npmjs.com/package/jest-preset-ec0lint-style)
+[![npm version](https://img.shields.io/npm/v/ec0lint-style.svg)](https://www.npmjs.com/package/ec0lint-style)
+[![Downloads](https://img.shields.io/npm/dm/ec0lint-style.svg)](https://www.npmjs.com/package/ec0lint-style)
+[![Build Status](https://github.com/ec0lint/ec0lint-style/workflows/CI/badge.svg)](https://github.com/ec0lint/ec0lint-style/actions)
 
-[Jest](https://facebook.github.io/jest/) preset for [ec0lint-style](https://github.com/ec0lint-style) plugins.
-
-## Installation
-
-Install the preset alongside Jest and ec0lint-style:
-
-```bash
-npm install jest-preset-ec0lint-style jest ec0lint-style --save-dev
-```
-
-## Setup
-
-Add the preset to your `jest.config.js` or `jest` field in `package.json`:
-
-```json
-{
-  "preset": "jest-preset-ec0lint-style"
-}
-```
-
-Optionally, you can avoid specifying `plugins` in every schema by defining your own setup file to configure the `testRule` function. This is useful if you have many tests. There are two additional steps to do this:
-
-1. Create `jest.setup.js` in the root of your project. Provide `plugins` option to `getTestRule()`:
-
-   ```js
-   const { getTestRule } = require("jest-preset-ec0lint-style");
-
-   global.testRule = getTestRule({ plugins: ["./"] });
-   ```
-
-2. Add `jest.setup.js` to your `jest.config.js` or `jest` field in `package.json`:
-
-   ```json
-   {
-     "preset": "jest-preset-ec0lint-style",
-     "setupFiles": ["jest.setup.js"]
-   }
-   ```
-
-## Usage
-
-The preset exposes a global `testRule` function that you can use to efficiently test your plugin using a schema.
-
-For example, we can test a plugin that enforces and autofixes kebab-case class selectors:
-
-```js
-// my-plugin.test.js
-const { messages, ruleName } = require(".");
-
-testRule({
-  plugins: ["."],
-  ruleName,
-  config: [true, { type: "kebab" }],
-  fix: true,
-
-  accept: [
-    {
-      code: ".class {}",
-      description: "simple class selector"
-    },
-    {
-      code: ".my-class {}",
-      description: "kebab class selector"
-    }
-  ],
-
-  reject: [
-    {
-      code: ".myClass {}",
-      fixed: ".my-class {}",
-      description: "camel case class selector",
-      message: messages.expected(),
-      line: 1,
-      column: 1,
-      endLine: 1,
-      endColumn: 8
-    },
-    {
-      code: ".MyClass,\n.MyOtherClass {}",
-      fixed: ".my-class,\n.my-other-class {}",
-      description: "two pascal class selectors in a selector list",
-      warnings: [
-        {
-          message: messages.expected(),
-          line: 1,
-          column: 1,
-          endLine: 1,
-          endColumn: 8
-        },
-        {
-          message: messages.expected(),
-          line: 2,
-          column: 1,
-          endLine: 2,
-          endColumn: 13
-        }
-      ]
-    }
-  ]
-});
-```
-
-## Schema properties
-
-See the [type definitions](index.d.ts).
-
-# ec0lint mission
+[Website](http://ec0lint.com) |
+[Configuring](https://stylelint.io/user-guide/configure/) |
+[Rules](http://ec0lint.com/features)
 
 ec0lint is a static code analysis tool that provides users with hints on how to reduce the carbon footprint of their websites during the development process. Applying code changes suggested by ec0lint results in lower carbon emissions per visit, quicker loading and higher space efficiency. The tool is open-source and community-driven.
 
-Learn more [at our page](https://ec0lint.com)
+This repository contains code for a recommended config of ec0lint-style. 
 
-## [Changelog](CHANGELOG.md)
+ec0lint-style is a complementary tool for ec0lint, which operates on all style difinitions.
 
-## [License](LICENSE)
+# Our goal
+
+Did you know that more than 250 000 websites are published every day?
+
+The majority uses too heavy fonts, too large/unnecessary images or utilises redundant libraries. These and other factors generate the carbon footprint. Actually, one view of an average website emits 4.6 g CO2 which sums up to 553 kg CO2 annually. Unfortunately, current solutions optimise only already existing websites.
+
+ec0lint is a tool for frontend developers that mitigates the carbon footprint of websites. It shows tips advising how to create a more climate-friendly code. Thanks to code optimization ec0lint can help in reducing CO2 emissions per one view from 4.6 g to ~0.2 g saving 529 kg CO2 (-96%!) annually.
+
+The tool is customized and each rule applied during the analysis can be adjusted, or treated as hints rather than errors. This flexibility allows the developers to reach their goals without interruptions from ec0lint, at the same time drawing attention to possible improvements.
+
+# Get started
+
+Make sure you have Node installed
+
+Download ec0lint:
+
+`npm i ec0lint ec0lint-css ec0lint-css-config-recommended`
+
+Configure your project:
+
+`npm init @ec0lint/config`
+
+Create a .ec0lint-cssrc.json configuration file in the root of your project with the following content:
+
+`{ "extends": "ec0lint-css-config-recommended" } `
+
+Split your terminal and run:
+
+`npx ec0lint-css "**/*.css" npx ec0lint .`
+
+Let's build an eco-friendly website!
+
+# How to start contributing
+
+If you wish to contribute, just write to us and start coding!
+
+You can also look at our issues (in the main repository: https://github.com/ec0lint/ec0lint/issues) and search for a task for you.
+
+Thank you!
+
+We are open to collaboration on improving ec0lint, and we are very grateful for all contributions and feedback on the tool. Thank you for creating sustainable digital environment with us!

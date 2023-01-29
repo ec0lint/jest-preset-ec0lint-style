@@ -1,6 +1,6 @@
 {
   "name": "jest-preset-ec0lint-style",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Jest preset for ec0lint-style plugins.",
   "keywords": [
     "ec0lint-style",
